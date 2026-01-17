@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoText Hub</string>
+    <string name="settings_title">Settings</string>
+    <string name="message_templates_title">Message Templates</string>
+    <string name="missed_call_listener_label">Missed Call Listener</string>
+</resources>

@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Don't commit keystore passwords (but keystore itself is OK for personal projects)
+# autotexthub-release.jks
