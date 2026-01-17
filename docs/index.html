@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Losing Missed Calls | AutoText Hub</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+        .problem {
+            padding: 60px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .problem h2 {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: #1e3a5f;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+        }
+        .solution {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .solution h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: #1e3a5f;
+        }
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: #1e3a5f;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .step-content p {
+            color: #666;
+        }
+        .pricing {
+            background: #1e3a5f;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+        .price-card {
+            background: white;
+            color: #333;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1e3a5f;
+        }
+        .price-sub {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .price-features {
+            text-align: left;
+            margin: 30px 0;
+        }
+        .price-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            list-style: none;
+        }
+        .price-features li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+        .monthly {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .monthly-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e3a5f;
+        }
+        .testimonial {
+            padding: 60px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .testimonial blockquote {
+            font-size: 1.3rem;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            color: #555;
+        }
+        .testimonial cite {
+            color: #888;
+        }
+        .faq {
+            padding: 60px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1e3a5f;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #1e3a5f;
+        }
+        .faq-item p {
+            color: #666;
+        }
+        .final-cta {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .cta-button-light {
+            display: inline-block;
+            background: white;
+            color: #ff6b35;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        footer a { color: #aaa; }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .stats { gap: 20px; }
+            .stat-number { font-size: 2rem; }
+            .step { flex-direction: column; text-align: center; }
+            .step-number { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Stop Losing Jobs to Missed Calls</h1>
+        <p>When you can't answer, AutoText Hub instantly texts back — so leads don't call your competitor.</p>
+        <a href="tel:+1YOUR-PHONE" class="cta-button">📞 Call to Get Started</a>
+    </section>
+
+    <!-- Problem -->
+    <section class="problem">
+        <h2>Every Missed Call Is Money Walking Away</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">of callers won't leave a voicemail</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">62%</div>
+                <div class="stat-label">will call your competitor instead</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">$500+</div>
+                <div class="stat-label">average job lost per missed call</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution">
+        <h2>Here's How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Customer calls, you can't answer</h3>
+                    <p>You're on a ladder, under a car, or with another customer.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>AutoText Hub detects the missed call</h3>
+                    <p>Within seconds, it sees the missed call notification.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Your custom text goes out automatically</h3>
+                    <p>"Hey! Sorry I missed you — I'm with a customer. Text me what you need or book here: [your link]"</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Lead stays warm, job gets booked</h3>
+                    <p>They text back or book online instead of calling the next guy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <h2>Simple, Honest Pricing</h2>
+        <div class="price-card">
+            <div class="price">$149</div>
+            <div class="price-sub">one-time setup</div>
+            <ul class="price-features">
+                <li>Install & configure on your phone</li>
+                <li>Custom message templates (missed call, after-hours, weekends)</li>
+                <li>Your booking link or service menu added</li>
+                <li>Number blocking for spam callers</li>
+                <li>TCPA-compliant opt-out language</li>
+                <li>30 minutes of training</li>
+                <li>Text/call support for 30 days</li>
+            </ul>
+            <div class="monthly">
+                <div class="monthly-price">+ $19/month</div>
+                <p style="color: #666; font-size: 0.9rem;">Optional: ongoing support, template updates, new features</p>
+            </div>
+            <a href="tel:+1YOUR-PHONE" class="cta-button" style="margin-top: 20px; display: block;">Get Started Now</a>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <blockquote>
+            "I was losing 3-4 calls a day while on jobs. First week with AutoText, I booked two $800 repairs from texts that came back. Paid for itself in one day."
+        </blockquote>
+        <cite>— Mike R., Mobile Mechanic, Charlotte</cite>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>Questions?</h2>
+        <div class="faq-item">
+            <h3>What phone do I need?</h3>
+            <p>Any Android phone running Android 8.0 or newer. (iPhone version coming soon.)</p>
+        </div>
+        <div class="faq-item">
+            <h3>Will it text every missed call?</h3>
+            <p>You control it. Set quiet hours, block numbers, and we add a 5-minute cooldown so repeat callers don't get spammed.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is this legal?</h3>
+            <p>Yes. They called you first (that's consent). We include opt-out language ("Reply STOP") for full compliance.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What if I want to cancel?</h3>
+            <p>The $149 setup is yours forever. The $19/month is optional and can be cancelled anytime—no contracts.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you see my texts or calls?</h3>
+            <p>No. Everything stays on your phone. We don't have access to your messages or call history.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Ready to Stop Losing Leads?</h2>
+        <p>Most setups done same-day. You'll be recovering missed calls by tonight.</p>
+        <a href="tel:+1YOUR-PHONE" class="cta-button-light">📞 Call Now: YOUR-PHONE</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>AutoText Hub — Charlotte Service Hub</p>
+        <p><a href="mailto:charlotte@charlotteservicehub.com">charlotte@charlotteservicehub.com</a></p>
+        <p style="margin-top: 10px; font-size: 0.9rem;"><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
